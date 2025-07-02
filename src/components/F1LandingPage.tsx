@@ -58,18 +58,14 @@ const F1LandingPage: React.FC = () => {
     }
   ];
 
-
-
   const handleProductClick = (productId: string) => {
     console.log('[LandingF1] Product clicked:', productId);
-    // Here you would navigate to /produto/[id]
-    alert(`Redirecionando para produto: ${productId}`);
+    window.location.href = "https://go.tribopay.com.br/cf7a5j4cei";
   };
 
   const handleCTAClick = () => {
     console.log('[LandingF1] CTA clicked');
-    // Here you would navigate to checkout or product selection
-    alert('Redirecionando para checkout...');
+    window.location.href = "https://go.tribopay.com.br/cf7a5j4cei";
   };
 
   if (isLoading) {
@@ -136,7 +132,7 @@ const F1LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {products.map((product, index) => (
+            {products.map((product) => (
               <div
                 key={product.id}
                 className={`group relative bg-gradient-to-br ${product.teamColor} p-1 rounded-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl`}
